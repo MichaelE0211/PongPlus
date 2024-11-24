@@ -213,73 +213,7 @@ public class Ball {
             dx = (float) Math.cos(Math.toRadians(globalAngle)) * currentSpeed;
             dy = (float) Math.sin(Math.toRadians(globalAngle)) * currentSpeed;
 
-//            // Flip direction
-//            if (currentDirection.equals("Player")) {
-//                currentDirection = "Enemy";
-//            }
-//            else {
-//                currentDirection = "Player";
-//            }
-//            System.out.println(currentDirection);
-//
-//
-//            // Calculate new angle
-//            System.out.print("   " + currentAngle + " was modified to ");
-//            float paddleTopY = paddle.getY() + paddle.getHeight() / 2;
-//            float paddleBottomY = paddle.getY() - paddle.getHeight() / 2;
-//            float paddleMidY = (paddleTopY + paddleBottomY) / 2;
-//            float paddleSize = (paddleTopY - paddleBottomY);
-//
-//            int unadjustedAngle = (int) (currentAngle * (1 + (1 - (Math.abs(y - paddleMidY)) / paddleSize)));
-//            System.out.println(unadjustedAngle);
-//
-//            // Keep angle between 0 - 360 deg.
-//            System.out.print("   After checking its in range: ");
-//            while (unadjustedAngle > 360) {
-//                unadjustedAngle -= 360;
-//            }
-//            System.out.println(unadjustedAngle);
-//
-//            System.out.print("   After final corrections ");
-//            // Ensure angle is facing the right direction
-//            if (currentDirection.equals("Player")) {
-//                if (unadjustedAngle >= 0 && unadjustedAngle <= 90) {
-//                    unadjustedAngle += 90;
-//                } else if (unadjustedAngle >= 270) {
-//                    unadjustedAngle -= 90;
-//                }
-//            }
-//            else {
-//                if (unadjustedAngle >= 90 && unadjustedAngle <= 180) {
-//                    unadjustedAngle -= 90;
-//                }
-//                else if (unadjustedAngle >= 180 && unadjustedAngle <= 270) {
-//                    unadjustedAngle += 90;
-//                }
-//            }
-//
-//            currentAngle = unadjustedAngle; // Adjusted
-//            System.out.println(currentAngle);
-//
 
-
-
-//            // Reverse horizontal direction
-//            dx = -Math.signum(dx) * Math.abs(dx);
-//
-//
-//
-//            // Adjust dy based on paddle movement, with scaling
-//            float scale = 0.1f * Math.abs(dx);
-//            dy += (paddle.getDirection() * scale);
-//
-//            // Cap vertical speed
-//            if (Math.abs(dy) > 600f) {
-//                dy = Math.signum(dy) * 600f;
-//            }
-//            else if (Math.abs(dy) < 100f) {
-//                dy = Math.signum(dy) * 100f;
-//            }
         }
     }
     public void reset() {
